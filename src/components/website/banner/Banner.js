@@ -193,8 +193,8 @@ function Banner() {
       backgroundPosition: 'right center',
       color: '#fff',
       textDecoration: 'none',
-      transform: 'scale(1.02)', // Optional: slight scale effect
-      boxShadow: '0 0 25px #52c234', // Optional: enhanced glow
+      transform: 'scale(1.02)',
+      boxShadow: '0 0 25px #52c234', 
     },
   }}
 >
