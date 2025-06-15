@@ -87,7 +87,7 @@ function VatConsultant() {
 
   return (
     <Box ref={containerRef} sx={{ px: { xs: 2, md: 10 }, py: 4 }}>
-      <Grid container spacing={4} alignItems="center">
+      <Grid container spacing={4} alignItems="center" sx={{boxShadow:4,px:4,borderRadius:"10px",py:4}}>
       
         <Grid size={{xs:12,md:7}} data-aos="fade-right">
           <Typography

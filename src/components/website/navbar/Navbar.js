@@ -493,7 +493,7 @@ export default function Navbar() {
                 {/* Mobile Menu */}
                 {isMobile && (
                     <IconButton onClick={() => setOpen(true)}>
-                        <MenuIcon sx={{color:"white"}} />
+                        <MenuIcon sx={{color:"black"}} />
                     </IconButton>
                 )}
             </Box>
@@ -522,7 +522,7 @@ export default function Navbar() {
             </Drawer>
 
 
-            <Box id="home" height="100vh" >
+            <Box id="home" minHeight="100vh" >
                 <Banner />
             </Box>
             <Box id="services"><Services /></Box>

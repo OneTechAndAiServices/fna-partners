@@ -1,5 +1,8 @@
 // "use client";
-// import React from "react";
+// import React, { useEffect } from "react";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
+
 // import {
 //   Box,
 //   Button,
@@ -14,7 +17,6 @@
 //   ListItemText,
 //   Paper,
 // } from "@mui/material";
-// import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 // import { Circle } from "@mui/icons-material";
 
 // const services = [
@@ -52,6 +54,14 @@
 //   const theme = useTheme();
 //   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
+//   useEffect(() => {
+//     AOS.init({
+//       duration: 800,
+//       easing: "ease-in-out",
+//       once: true,
+//     });
+//   }, []);
+
 //   return (
 //     <Box
 //       sx={{
@@ -67,10 +77,10 @@
 //             sx={{
 //               backgroundColor: "#005430",
 //               borderRadius: "999px",
-//               border:"1px solid #c3d5cd",
-//               px: 4,
+//               border: "1px solid #c3d5cd",
+//               px: 2,
 //               py: 1,
-//               fontSize: 14,
+//              fontSize:"22px",
 //               textTransform: "none",
 //               "&:hover": {
 //                 backgroundColor: "#155c51",
@@ -83,7 +93,12 @@
 
 //         <Grid container spacing={4}>
 //           {services.map((service, index) => (
-//             <Grid  size={{xs:12,sm:6}} key={index}>
+//             <Grid
+//             size={{xs:12,md:6}}
+//               key={index}
+//               data-aos="fade-up"
+//               data-aos-delay={index * 150}
+//             >
 //               <Paper
 //                 elevation={3}
 //                 sx={{
@@ -99,14 +114,17 @@
 //                 <Typography
 //                   variant="h6"
 //                   gutterBottom
-//                   sx={{ color: "#19685B", fontWeight: 500 ,fontSize:"30px"}}
+//                   sx={{
+//                     color: "#19685B",
+//                     fontWeight: 550,
+//                     fontSize: "30px",
+//                   }}
 //                 >
 //                   {service.title}
 //                 </Typography>
 //                 <Typography
-//                 //   variant="body2"
 //                   color="textSecondary"
-//                   sx={{ mb: 2,fontSize:"23px",fontWeight:300 }}
+//                   sx={{ mb: 2, fontSize: "23px", fontWeight: 300 }}
 //                 >
 //                   {service.description}
 //                 </Typography>
@@ -118,11 +136,14 @@
 //                         <ListItemIcon sx={{ minWidth: 28 }}>
 //                           <Circle
 //                             fontSize="small"
-//                             sx={{ color: "#19685B",height:"16px" }}
+//                             sx={{ color: "#19685B", height: "16px" }}
 //                           />
 //                         </ListItemIcon>
 //                         <ListItemText
-//                           primaryTypographyProps={{ fontSize: "15px",fontWeight:300 }}
+//                           primaryTypographyProps={{
+//                             fontSize: "15px",
+//                             fontWeight: 300,
+//                           }}
 //                           primary={point}
 //                         />
 //                       </ListItem>
@@ -206,9 +227,24 @@ const Services = () => {
   return (
     <Box
       sx={{
-        background: "linear-gradient(to bottom, #19685B, #95D0BB)",
         py: 8,
         px: 2,
+        minHeight: "100vh",
+        // background: "linear-gradient(-45deg, #be185d, #ec4899, #d946ef, #0ea5e9)",
+           background: "linear-gradient(-45deg, #19685B, #95D0BB,#005430)",
+        backgroundSize: "300% 300%",
+        animation: "bgAnimation 15s ease infinite",
+        "@keyframes bgAnimation": {
+          "0%": {
+            backgroundPosition: "left",
+          },
+          "50%": {
+            backgroundPosition: "right",
+          },
+          "100%": {
+            backgroundPosition: "left",
+          },
+        },
       }}
     >
       <Container maxWidth="lg">
@@ -219,9 +255,9 @@ const Services = () => {
               backgroundColor: "#005430",
               borderRadius: "999px",
               border: "1px solid #c3d5cd",
-              px: 4,
+              px: 2,
               py: 1,
-              fontSize: 14,
+              fontSize: "22px",
               textTransform: "none",
               "&:hover": {
                 backgroundColor: "#155c51",
@@ -246,6 +282,7 @@ const Services = () => {
                   borderRadius: 3,
                   p: 3,
                   minHeight: "360px",
+                  backgroundColor: "rgba(255,255,255,0.95)",
                   transition: "0.3s",
                   "&:hover": {
                     boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
@@ -257,7 +294,7 @@ const Services = () => {
                   gutterBottom
                   sx={{
                     color: "#19685B",
-                    fontWeight: 500,
+                    fontWeight: 550,
                     fontSize: "30px",
                   }}
                 >
