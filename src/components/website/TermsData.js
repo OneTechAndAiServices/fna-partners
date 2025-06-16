@@ -7,6 +7,7 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
+  Button,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
@@ -65,7 +66,7 @@ export default function TermsData() {
   return (
     <Box sx={{ maxWidth: 800, mx: 'auto', my: 4, px: 2 }}>
 
-
+<Button href='/' sx={{ml:-4,mb:2}} variant='contained'>back</Button>
       {sections.map((section, idx) => (
         <Accordion key={idx} disableGutters>
           <AccordionSummary

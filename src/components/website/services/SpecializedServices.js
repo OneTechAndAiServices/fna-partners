@@ -41,16 +41,19 @@ function SpecializedServices() {
 
   return (
     <Box ref={sectionRef} sx={{ px: { xs: 2, md: 10 }, py: 8, backgroundColor: '#fff'  }}>
-        <Typography variant="h5" sx={{ color: green, fontWeight: 550, fontSize: "30px" ,textAlign:"center",mb:4}}>
-            Our Range of Specialized Services Includes:
-          </Typography>
+      
       <Grid container spacing={4}>
       
 
         <Grid size={{xs:12,md:12}}>
           <Grid container spacing={2}>
-            <Grid size={{xs:12,md:6}} data-aos="fade-up" data-aos-delay="100">
-            <Box boxShadow={2} px={2} borderRadius={"12px"} minHeight={"250px"}> 
+         <Grid size={{xs:12,md:4}} data-aos="fade-up" data-aos-delay="100">
+                <Typography variant="h5" sx={{ color: green, fontWeight: 550, fontSize: "30px" ,mb:4}}>
+            Our Range of Specialized Services Includes:
+          </Typography>
+            </Grid>
+            <Grid size={{xs:12,md:4}} data-aos="fade-up" data-aos-delay="100">
+            <Box px={2} borderRadius={"12px"} minHeight={"250px"}> 
                 <List dense>
                 {services.slice(0, 4).map((service, index) => (
                   <ListItem key={index} disableGutters className="gsap-item">
@@ -68,8 +71,8 @@ function SpecializedServices() {
             </Box>
             </Grid>
 
-            <Grid size={{xs:12,md:6}} data-aos="fade-up" data-aos-delay="200">
-                      <Box boxShadow={2} px={2} borderRadius={"12px"} minHeight={"250px"}>
+            <Grid size={{xs:12,md:4}} data-aos="fade-up" data-aos-delay="200">
+                      <Box  px={2} borderRadius={"12px"} minHeight={"250px"}>
               <List dense>
                 {services.slice(4).map((service, index) => (
                   <ListItem key={index + 5} disableGutters className="gsap-item">

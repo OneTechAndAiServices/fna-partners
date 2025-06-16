@@ -7,7 +7,8 @@ import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import gsap from 'gsap';
-
+const darkGreen = "#005430";
+const lightGreen = "#00BA6A";
 function Banner() {
   const [displayText, setDisplayText] = useState('');
   const [index, setIndex] = useState(0);
@@ -172,29 +173,37 @@ function Banner() {
 
           {/* Button */}
 <Button
+href='/our-services'
   variant="contained"
-  data-aos="fade-up"
-  data-aos-delay="600"
   sx={{
-    backgroundImage: 'linear-gradient(to right, #52c234 0%, #061700 51%, #52c234 100%)',
-    // margin: '10px',
-    padding: '8px 30px',
-    textAlign: 'center',
-    textTransform: 'uppercase',
-    transition: 'all 0.5s ease-in-out', // More specific transition
-    backgroundSize: '200% auto',
-    color: 'white',
-    boxShadow: '0 0 20px #eee',
-    borderRadius: '10px',
-    display: 'block',
-    fontWeight: 'bold',
-    fontSize: '14px',
-    '&:hover': {
-      backgroundPosition: 'right center',
-      color: '#fff',
-      textDecoration: 'none',
-      transform: 'scale(1.02)',
-      boxShadow: '0 0 25px #52c234', 
+    position: "relative",
+    overflow: "hidden",
+    px: 4,
+    py: 1.5,
+    fontSize: { xs: 14, md: 16 },
+    fontWeight: 500,
+    textTransform: "none",
+    borderRadius: "999px",
+    color: "#fff",
+    background: `linear-gradient(to right, ${darkGreen}, ${lightGreen})`,
+    zIndex: 1,
+    "&::before": {
+      content: '""',
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      background: `linear-gradient(to right, ${lightGreen}, ${darkGreen})`,
+      zIndex: -1,
+      transition: "opacity 0.5s ease",
+      opacity: 0,
+    },
+    "&:hover::before": {
+      opacity: 1,
+    },
+    "&:hover": {
+      boxShadow: 4,
     },
   }}
 >
@@ -264,6 +273,8 @@ export default Banner;
 
 
 // ---------------------------------center align text
+
+
 // 'use client';
 
 // import React, { useState, useEffect, useRef } from 'react';

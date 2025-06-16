@@ -374,6 +374,8 @@ import Management from '../management/Management';
 import FormOnly from '../contactUs/FormOnly';
 import { EmailOutlined, LinkedIn, PhoneOutlined } from '@mui/icons-material';
 import Link from 'next/link';
+import AboutUs from '../aboutUs/AboutUs';
+import News from '../news/News';
 
 export default function Navbar() {
     const theme = useTheme();
@@ -413,7 +415,7 @@ export default function Navbar() {
             <Typography onClick={() => { setOpen(false); handleScroll('home'); }} sx={{ my: 2, cursor: 'pointer' }}>Home</Typography>
             <Typography onClick={() => { setOpen(false); handleScroll('services'); }} sx={{ my: 2, cursor: 'pointer' }}>Services</Typography>
             <Typography onClick={() => { setOpen(false); handleScroll('about'); }} sx={{ my: 2, cursor: 'pointer' }}>About Us</Typography>
-            <Typography onClick={() => { setOpen(false); handleScroll('blogs'); }} sx={{ my: 2, cursor: 'pointer' }}>Blogs</Typography>
+            <Typography onClick={() => { setOpen(false); handleScroll('blogs'); }} sx={{ my: 2, cursor: 'pointer' }}>Blogs & News</Typography>
             <Typography onClick={() => { setOpen(false); handleScroll('contact'); }} sx={{ my: 2, cursor: 'pointer' }}>Contact Us</Typography>
         </Box>
     );
@@ -450,12 +452,13 @@ export default function Navbar() {
   }}
             >
 
-                <Box ref={logoRef}>
+                <Box >
                     <Image
                         src="/logo.png"
                         alt="logo"
                         width={148}
                         height={46}
+                        priority
                         style={{ objectFit: 'contain' }}
                     />
                 </Box>
@@ -466,6 +469,7 @@ export default function Navbar() {
                         sx={{
                             display: 'flex',
                             bgcolor: '#fff',
+                            alignItems:"center",
                             borderRadius: '40px',
                             boxShadow: '0px 1px 10px rgba(0, 0, 0, 0.1)',
                             px: 3,
@@ -475,11 +479,11 @@ export default function Navbar() {
                     >
                         <Typography onClick={() => handleScroll('home')} sx={navStyle}>Home</Typography>
                         <Typography mx={1} color="#ccc">•</Typography>
-                        <Typography onClick={() => handleScroll('services')} sx={navStyle}>Services</Typography>
-                        <Typography mx={1} color="#ccc">•</Typography>
                         <Typography onClick={() => handleScroll('about')} sx={navStyle}>About Us</Typography>
                         <Typography mx={1} color="#ccc">•</Typography>
-                        <Typography onClick={() => handleScroll('blogs')} sx={navStyle}>Blogs</Typography>
+                        <Typography onClick={() => handleScroll('services')} sx={navStyle}>Services</Typography>
+                        <Typography mx={1} color="#ccc">•</Typography>
+                        <Typography onClick={() => handleScroll('blogs')} sx={navStyle}>Blogs & News</Typography>
                         <Typography mx={1} color="#ccc">•</Typography>
                         <Typography onClick={() => handleScroll('contact')} sx={navStyle}>Contact Us</Typography>
                     </Box>
@@ -490,7 +494,6 @@ export default function Navbar() {
 </Box>
                 </Box>
 
-                {/* Mobile Menu */}
                 {isMobile && (
                     <IconButton onClick={() => setOpen(true)}>
                         <MenuIcon sx={{color:"black"}} />
@@ -498,7 +501,6 @@ export default function Navbar() {
                 )}
             </Box>
 
-            {/* Loader */}
             {loading && (
                 <Box
                     position="fixed"
@@ -525,26 +527,28 @@ export default function Navbar() {
             <Box id="home" minHeight="100vh" >
                 <Banner />
             </Box>
+             <Box id="about">
+<AboutUs/>
+            </Box>
             <Box id="services"><Services /></Box>
-            <Box id="about">
-
             <SpecializedServices />
-            </Box>
-            <VatConsultant />
-            <Box id="blogs" >
-            <Management/>
-            </Box>
-            <Ifrs />
-            <Budget />
-            <StrategicPlanning />
+           
+            {/* <VatConsultant /> */}
             <BusinessFeasbility />
             <Box id="contact" >
                 <FormOnly/>
             </Box>
+            <Box id="blogs" >
+            <News/>
+            </Box>
+            {/* <Management/> */}
+            {/* <Ifrs />
+            <Budget />
+            <StrategicPlanning /> */}
 
 
 
-            <Box bgcolor={green} py={4} px={4}>
+            <Box sx={{background: `linear-gradient(to right, #005430, #00BA6A)`,}} py={4} px={4}>
                 <Grid container spacing={2}>
                     <Grid size={{ xs: 12, md: 3 }}>
                       <Typography sx={{fontSize:18,color:"white"}}>
@@ -572,7 +576,7 @@ export default function Navbar() {
                             <Typography onClick={() => handleScroll('home')} sx={footerStyle} >Home</Typography>
                             <Typography onClick={() => handleScroll('services')} sx={footerStyle} >Services</Typography>
                             <Typography onClick={() => handleScroll('about')} sx={footerStyle} >About Us</Typography>
-                            <Typography onClick={() => handleScroll('blogs')} sx={footerStyle} >Blogs</Typography>
+                            <Typography onClick={() => handleScroll('blogs')} sx={footerStyle} >Blogs & News</Typography>
                             <Typography onClick={() => handleScroll('contact')} sx={footerStyle} >Contact Us</Typography>
                         </Box>
                     </Grid>
