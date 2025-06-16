@@ -330,7 +330,6 @@ export default function OurServices() {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
-  const logoRef = useRef<HTMLDivElement>(null);
 
   const router   = useRouter();
   const pathname = usePathname();
@@ -372,21 +371,6 @@ export default function OurServices() {
     }
   }, [pathname]);
 
-  /* fade logo on scroll desktop */
-  useEffect(() => {
-    const handle = () => {
-      const y = window.scrollY;
-      if (!isMobile && logoRef.current) {
-        gsap.to(logoRef.current, {
-          opacity: y > 50 ? 0 : 1,
-          duration: 0.5,
-        });
-      }
-    };
-    window.addEventListener('scroll', handle);
-    return () => window.removeEventListener('scroll', handle);
-  }, [isMobile]);
-  /* -------------------------------- */
 
   /* ——— Drawer content ——— */
   const drawerMenu = (
@@ -430,7 +414,7 @@ export default function OurServices() {
         }}
       >
         {/* logo (left) */}
-        <Box ref={logoRef}>
+        <Box >
           <Image
             src="/logo.png"
             alt="logo"
