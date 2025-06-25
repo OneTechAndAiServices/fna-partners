@@ -382,6 +382,8 @@ export default function Navbar() {
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const [open, setOpen] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
     const logoRef = useRef();
 
     const handleScroll = (id) => {
@@ -407,8 +409,21 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleLogoFade);
     }, [isMobile]);
 
+    useEffect(() => {
+    const handleScroll = () => {
+        if (window.scrollY > 100) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
     const drawerMenu = (
-        <Box p={3} width="250px" textAlign="center" mt={4}>
+        <Box p={3} width="250px"  mt={8}>
             <IconButton onClick={() => setOpen(false)} sx={{ float: 'right' }}>
                 <CloseIcon />
             </IconButton>
@@ -436,19 +451,34 @@ export default function Navbar() {
                 //     zIndex: 1300,
                 //     boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
                 // }}
-                  sx={{
+                // sx={{
+                //     px: 2,
+                //     py: 1,
+                //     display: 'flex',
+                //     justifyContent: 'space-between',
+                //     alignItems: 'center',
+                //     // backgroundColor: '#fff', // Ensure it's not transparent
+                //     position: 'fixed', // Changed from 'sticky' to 'fixed'
+                //     top: 0,
+                //     left: 0,
+                //     width: '100%', // Ensure full width
+                //     zIndex: 1500, // Above all content
+                //     // boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
+                // }}
+                sx={{
     px: 2,
     py: 1,
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    // backgroundColor: '#fff', // Ensure it's not transparent
-    position: 'fixed', // Changed from 'sticky' to 'fixed'
+    position: 'fixed',
     top: 0,
     left: 0,
-    width: '100%', // Ensure full width
-    zIndex: 1500, // Above all content
-    // boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
+    width: '100%',
+    zIndex: 1500,
+    backgroundColor: isScrolled ? '#ffffff' : 'transparent',
+    boxShadow: isScrolled ? '0px 2px 10px rgba(0,0,0,0.05)' : 'none',
+    transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
   }}
             >
 
@@ -469,12 +499,12 @@ export default function Navbar() {
                         sx={{
                             display: 'flex',
                             bgcolor: '#fff',
-                            alignItems:"center",
+                            alignItems: "center",
                             borderRadius: '40px',
                             boxShadow: '0px 1px 10px rgba(0, 0, 0, 0.1)',
                             px: 3,
                             py: 1,
-                            ml:-16
+                            ml: -16
                         }}
                     >
                         <Typography onClick={() => handleScroll('home')} sx={navStyle}>Home</Typography>
@@ -489,14 +519,14 @@ export default function Navbar() {
                     </Box>
                 )}
                 <Box>
-<Box>
-    
-</Box>
+                    <Box>
+
+                    </Box>
                 </Box>
 
                 {isMobile && (
                     <IconButton onClick={() => setOpen(true)}>
-                        <MenuIcon sx={{color:"black"}} />
+                        <MenuIcon sx={{ color: "black" }} />
                     </IconButton>
                 )}
             </Box>
@@ -527,19 +557,19 @@ export default function Navbar() {
             <Box id="home" minHeight="100vh" >
                 <Banner />
             </Box>
-             <Box id="about">
-<AboutUs/>
+            <Box id="about">
+                <AboutUs />
             </Box>
             <Box id="services"><Services /></Box>
             <SpecializedServices />
-           
+
             {/* <VatConsultant /> */}
             <BusinessFeasbility />
             <Box id="contact" >
-                <FormOnly/>
+                <FormOnly />
             </Box>
             <Box id="blogs" >
-            <News/>
+                <News />
             </Box>
             {/* <Management/> */}
             {/* <Ifrs />
@@ -548,17 +578,17 @@ export default function Navbar() {
 
 
 
-            <Box sx={{background: `linear-gradient(to right, #005430, #00BA6A)`,}} py={4} px={4}>
+            <Box sx={{ background: `linear-gradient(to right, #005430, #00BA6A)`, }} py={4} px={4}>
                 <Grid container spacing={2}>
                     <Grid size={{ xs: 12, md: 3 }}>
-                      <Typography sx={{fontSize:18,color:"white"}}>
-                        Social Links</Typography>
-                           <Box mt={1}>
-<IconButton href='https://www.linkedin.com/company/fna-partners-gcc/' target='_blank'>
+                        <Typography sx={{ fontSize: 18, color: "white" }}>
+                            Social Links</Typography>
+                        <Box mt={1}>
+                            <IconButton href='https://www.linkedin.com/company/fna-partners-gcc/' target='_blank'>
 
-        <LinkedIn  sx={{color:"white"}} />
-</IconButton>
-    </Box>
+                                <LinkedIn sx={{ color: "white" }} />
+                            </IconButton>
+                        </Box>
                     </Grid>
                     <Grid size={{ xs: 12, md: 3 }}>
                         <Box
@@ -568,11 +598,11 @@ export default function Navbar() {
 
                                 // borderRadius: '40px',
                                 // boxShadow: '0px 1px 10px rgba(0, 0, 0, 0.1)',
-                                px: 3,
+                                // px: 3,
                                 py: 1,
                             }}
                         >
-                          <Typography sx={{fontSize:18,color:"white"}} >Site Map</Typography>
+                            <Typography sx={{ fontSize: 18, color: "white" }} >Site Map</Typography>
                             <Typography onClick={() => handleScroll('home')} sx={footerStyle} >Home</Typography>
                             <Typography onClick={() => handleScroll('services')} sx={footerStyle} >Services</Typography>
                             <Typography onClick={() => handleScroll('about')} sx={footerStyle} >About Us</Typography>
@@ -580,39 +610,41 @@ export default function Navbar() {
                             <Typography onClick={() => handleScroll('contact')} sx={footerStyle} >Contact Us</Typography>
                         </Box>
                     </Grid>
-                     <Grid size={{ xs: 12, md: 3 }}>
-                       <Typography sx={{fontSize:18,color:"white"}}>
-                        Privacy
+                    <Grid size={{ xs: 12, md: 3 }}>
+                        <Typography sx={{ fontSize: 18, color: "white" }}>
+                            Privacy
                         </Typography>
-                            <Box display={"flex"} flexDirection={"column"} >
-                <Typography fontWeight={"bold"} color='white' >
-                    Quick Links
-                </Typography>
-                <Link href={"/privacy-policy"} style={{ textDecoration: "none", color: "white" }}>
-                    <Typography sx={{ ":hover": { color: "white",transition:"0.3s" },transition:"0.3s" }} my={1}>Privacy Policy</Typography>
-                </Link>
-                <Link href={"/terms-and-condition"} style={{ textDecoration: "none", color: "white" }} my={1}>
-                    <Typography sx={{ ":hover": { color: "white",transition:"0.3s" },transition:"0.3s" }} my={1}> Terms and conditions  </Typography>
-                </Link>
-                <Link href={"/cookie-policy"} style={{ textDecoration: "none", color: "white" }}>
-                    <Typography sx={{ ":hover": { color: "white",transition:"0.3s" },transition:"0.3s" }} my={1}> Cookie Policy  </Typography>
-                </Link>
-            </Box>
+                        <Box display={"flex"} flexDirection={"column"} >
+                            <Typography fontWeight={"bold"} color='white' >
+                                Quick Links
+                            </Typography>
+                            <Link href={"/privacy-policy"} style={{ textDecoration: "none", color: "white" }}>
+                                <Typography sx={{ ":hover": { color: "white", transition: "0.3s" }, transition: "0.3s" }} my={1}>Privacy Policy</Typography>
+                            </Link>
+                            <Link href={"/terms-and-condition"} style={{ textDecoration: "none", color: "white" }} my={1}>
+                                <Typography sx={{ ":hover": { color: "white", transition: "0.3s" }, transition: "0.3s" }} my={1}> Terms and conditions  </Typography>
+                            </Link>
+                            <Link href={"/cookie-policy"} style={{ textDecoration: "none", color: "white" }}>
+                                <Typography sx={{ ":hover": { color: "white", transition: "0.3s" }, transition: "0.3s" }} my={1}> Cookie Policy  </Typography>
+                            </Link>
+                        </Box>
                     </Grid>
-                     <Grid size={{ xs: 12, md: 3 }}>
-                        <Typography sx={{fontSize:18,color:"white"}}>
-                        Contacts
+                    <Grid size={{ xs: 12, md: 3 }} sx={{borderLeft:"2px solid white",pl:3}}>
+                        <Typography sx={{ fontSize: 18, color: "white" }}>
+                            Contacts
                         </Typography>
-                        <Box display={"flex"} alignItems={"center"} mt={2}>
-    <PhoneOutlined sx={{fontSize:18, color: "white"}}/>
-    <Typography ml={2} sx={{ ":hover": { color: "white",transition:"0.3s" },transition:"0.3s" , color: "white"}}>050-2405436</Typography>
+                        <Box display={"flex"}  flexDirection={"column"}  mt={2}>
+                            <PhoneOutlined sx={{ fontSize: 40,borderRadius:10,p:1, color: "black" ,bgcolor:"white" }} />
+                            <Typography my={1} sx={{ ":hover": { color: "white", transition: "0.3s" }, transition: "0.3s", color: "white" }}>+971 50 903 3195</Typography>
 
-    </Box>                 
-    <Box display={"flex"} alignItems={"center"} mt={1}>
-    <EmailOutlined sx={{fontSize:18, color: "white"}}/>
-    <Typography ml={2} sx={{ ":hover": { color: "white",transition:"0.3s" },transition:"0.3s", color: "white" }}>info@fna-partners.com  </Typography>
+                              <Typography my={1} sx={{ ":hover": { color: "white", transition: "0.3s" }, transition: "0.3s", color: "white" }}>+971 52 854 9935</Typography>
 
-    </Box>  
+                        </Box>
+                        <Box display={"flex"} flexDirection={"column"} mt={1}>
+                            <EmailOutlined sx={{ fontSize: 40,borderRadius:10,p:1, color: "black" ,bgcolor:"white" }} />
+                            <Typography  my={1} sx={{ ":hover": { color: "white", transition: "0.3s" }, transition: "0.3s", color: "white" }}>info@fna-partners.com  </Typography>
+
+                        </Box>
                     </Grid>
                 </Grid>
 

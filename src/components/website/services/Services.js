@@ -403,7 +403,7 @@ const services = [
   {
     title: "ACCOUNTING SERVICES",
     description:
-      "We are a well-established and registered accounting service provider serving businesses in Dubai and throughout the UAE.",
+      "We are a well-established and registered accounting service provider serving businesses in UAE and Other GCC Countries.",
     points: [
       "Accounting & Bookkeeping",
       "VAT and Corporate Tax Consultancy",

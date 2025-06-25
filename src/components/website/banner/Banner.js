@@ -101,7 +101,7 @@ function Banner() {
   WebkitTextFillColor: 'transparent',
                 
                 minWidth: '12ch',
-                fontWeight:900,
+                fontWeight:750,
                 fontSize:"50px",
                 display: 'inline-block',
                 overflow: 'hidden',
@@ -118,8 +118,8 @@ function Banner() {
           </Typography>
 
           <Typography
-            fontSize="40px"
-            fontWeight={400}
+            fontSize="45px"
+            fontWeight={530}
             display="flex"
             // justifyContent="center"
             gap="8px"
@@ -128,7 +128,8 @@ function Banner() {
             alignItems="center"
             data-aos="zoom-in-up"
           >
-            <Box
+            UAE and Other GCC Countries
+            {/* <Box
               component="span"
               sx={{
                 backgroundImage: 'url(/dubai.jpg)',
@@ -141,7 +142,7 @@ function Banner() {
                 filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.6))',
               }}
             >
-              UAE
+          
             </Box>
             <Box component="span">&</Box>
             <Box
@@ -158,10 +159,10 @@ function Banner() {
               }}
             >
               Saudi Arabia
-            </Box>
+            </Box> */}
           </Typography>
 
-          {/* Subtitle */}
+       
           <Typography
             variant="body1"
             sx={{ mb: 3 ,fontSize:"16px", fontWeight:"bold"}}
@@ -171,7 +172,6 @@ function Banner() {
             Empowering Your Business with 30+ Years of Financial Expertise
           </Typography>
 
-          {/* Button */}
 <Button
 href='/our-services'
   variant="contained"

@@ -186,14 +186,10 @@ export default function AboutUs() {
             </Typography>
 
             <Typography fontSize={{ xs: 16, md: 20 }} fontWeight={300} mt={1}>
-              With 30 years of experience in accounting, finance, and strategy,
-              we are committed to delivering exceptional results. Our tailored
-              financial solutions are designed to empower your business to
-              thrive.
+             With 30 years of experience in accounting, finance, and strategy, we are committed to delivering exceptional results. Our tailored financial solutions are designed to empower your business to thrive.
             </Typography>
                <Typography fontSize={{ xs: 16, md: 20 }} fontWeight={300} mt={2}>
-              Drawing on deep industry knowledge and a forward‑thinking
-              approach, we help you overcome challenges and seize new
+             Drawing on deep industry knowledge and a forward-thinking approach, we help you overcome challenges and seize new opportunities. Integrity and excellence guide everything we do.
             </Typography>
                <Typography fontSize={{ xs: 16, md: 20 }} fontWeight={300} mt={2} mb={2}>
               Partner with us to unlock your business&apos;s full potential and

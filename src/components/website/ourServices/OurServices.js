@@ -330,6 +330,7 @@ export default function OurServices() {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+const [isScrolled, setIsScrolled] = useState(false);
 
   const router   = useRouter();
   const pathname = usePathname();
@@ -370,6 +371,18 @@ export default function OurServices() {
       setLoading(false);
     }
   }, [pathname]);
+useEffect(() => {
+    const handleScroll = () => {
+        if (window.scrollY > 100) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
 
   /* ——— Drawer content ——— */
@@ -401,17 +414,20 @@ export default function OurServices() {
       {/* ========= HEADER ========= */}
       <Box
         sx={{
-          px: 2,
-          py: 1,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent:"space-between",
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100%',
-          zIndex: 1500,
-        }}
+    px: 2,
+    py: 1,
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    zIndex: 1500,
+    backgroundColor: isScrolled ? '#ffffff' : 'transparent',
+    boxShadow: isScrolled ? '0px 2px 10px rgba(0,0,0,0.05)' : 'none',
+    transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
+  }}
       >
         {/* logo (left) */}
         <Box >
