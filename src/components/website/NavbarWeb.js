@@ -25,20 +25,10 @@ import {
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 
-/* ——— sections you already have ——— */
-import Banner from './Banner';
-import Text from './Text';
-import VatConsultant from '../services/VatConsultant';
-import Ifrs from '../ifrs/Ifrs';
-import Budget from '../budget/Budget';
-import Management from '../management/Management';
-import StrategicPlanning from '../strategic/StrategicPlanning';
-import BusinessFeasbility from '../business/BusinessFeasbility';
-import FormOnly from '../contactUs/FormOnly';
-import NavbarWeb from '../NavbarWeb';
+
 /* ———————————————————————— */
 
-export default function OurServices() {
+export default function NavbarWeb() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [open, setOpen] = useState(false);
@@ -99,33 +89,43 @@ useEffect(() => {
 
 
   /* ——— Drawer content ——— */
-  // const drawerMenu = (
-  //   <Box p={3} width={250} textAlign="center" mt={4}>
-  //     <IconButton onClick={() => setOpen(false)} sx={{ float: 'right' }}>
-  //       <CloseIcon />
-  //     </IconButton>
-  //     <Typography sx={{ my: 2, cursor: 'pointer' }} onClick={goHome}>
-  //       Home
-  //     </Typography>
-  //     <Typography sx={{ my: 2, cursor: 'pointer' }} onClick={goHome}>
-  //       Services
-  //     </Typography>
-  //     <Typography sx={{ my: 2, cursor: 'pointer' }} onClick={goHome}>
-  //       About Us
-  //     </Typography>
-  //     <Typography sx={{ my: 2, cursor: 'pointer' }} onClick={goHome}>
-  //       Blogs & News
-  //     </Typography>
-  //     <Typography sx={{ my: 2, cursor: 'pointer' }} onClick={goContact}>
-  //       Contact Us
-  //     </Typography>
-  //   </Box>
-  // );
+  const drawerMenu = (
+    <Box p={3} width={250} textAlign="center" mt={4}>
+      <IconButton onClick={() => setOpen(false)} sx={{ float: 'right' }}>
+        <CloseIcon />
+      </IconButton>
+      <Link href={"/"}>
+      <Typography sx={{ my: 2, cursor: 'pointer' }} >
+        Home
+      </Typography>
+      </Link>
+      <Link href={"/our-services"}>
+      <Typography sx={{ my: 2, cursor: 'pointer' }} onClick={goHome}>
+        Services
+      </Typography>
+      </Link>
+      <Link href={"/about-us"}>
+      <Typography sx={{ my: 2, cursor: 'pointer' }} onClick={goHome}>
+        About Us
+      </Typography>
+      </Link>
+      <Link href={"/blog-and-news"}>
+      <Typography sx={{ my: 2, cursor: 'pointer' }} onClick={goHome}>
+        Blogs & News
+      </Typography>
+      </Link>
+      <Link href={"/contact-us"}>
+      <Typography sx={{ my: 2, cursor: 'pointer' }} onClick={goContact}>
+        Contact Us
+      </Typography>
+      </Link>
+    </Box>
+  );
 
   return (
     <>
     
-      {/* <Box
+      <Box
         sx={{
     px: 2,
     py: 1,
@@ -142,7 +142,7 @@ useEffect(() => {
     transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
   }}
       >
-        {/* logo (left) 
+        {/* logo (left) */}
         <Box >
           <Image
             src="/logo.png"
@@ -154,7 +154,7 @@ useEffect(() => {
           />
         </Box>
 
-        {/* navbar (center) 
+        {/* navbar (center) */}
         {!isMobile && (
           <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
             <Box
@@ -165,49 +165,61 @@ useEffect(() => {
                 borderRadius: 40,
                 boxShadow: '0 1px 10px rgba(0,0,0,0.1)',
                 px: 3,
-                py: 1,
+                // py: 1,
               }}
             >
-              <Typography sx={navStyle} onClick={goHome}>
-                Home
-              </Typography>
-              <Typography mx={1} color="#ccc">
+             
+                <Link href={"/"}>
+      <Typography sx={{ my: 2, cursor: 'pointer' }} >
+        Home
+      </Typography>
+      </Link>
+       <Typography mx={1} color="#ccc">
                 •
               </Typography>
-              <Typography sx={navStyle} onClick={goHome}>
-                About Us
-              </Typography>
-              <Typography mx={1} color="#ccc">
+      <Link href={"/our-services"}>
+      <Typography sx={{ my: 2, cursor: 'pointer' }} onClick={goHome}>
+        Services
+      </Typography>
+      </Link>
+       <Typography mx={1} color="#ccc">
                 •
               </Typography>
-              <Typography sx={navStyle} onClick={goHome}>
-                Services
-              </Typography>
-              <Typography mx={1} color="#ccc">
+      <Link href={"/about-us"}>
+      <Typography sx={{ my: 2, cursor: 'pointer' }} onClick={goHome}>
+        About Us
+      </Typography>
+      </Link>
+       <Typography mx={1} color="#ccc">
                 •
               </Typography>
-              <Typography sx={navStyle} onClick={goHome}>
-                Blogs & News
-              </Typography>
-              <Typography mx={1} color="#ccc">
+      <Link href={"/blog-and-news"}>
+      <Typography sx={{ my: 2, cursor: 'pointer' }} onClick={goHome}>
+        Blogs & News
+      </Typography>
+      </Link>
+       <Typography mx={1} color="#ccc">
                 •
               </Typography>
-              <Typography sx={navStyle} onClick={goContact}>
-                Contact Us
-              </Typography>
+      <Link href={"/contact-us"}>
+      <Typography sx={{ my: 2, cursor: 'pointer' }} onClick={goContact}>
+        Contact Us
+      </Typography>
+      </Link>
             </Box>
           </Box>
         )}
 
-        {/* hamburger (right) 
+        {/* hamburger (right) */}
         {isMobile && (
           <IconButton onClick={() => setOpen(true)}>
             <MenuIcon sx={{ color: 'black' }} />
           </IconButton>
         )}
-      </Box> */}
-<NavbarWeb/>
-      {/* {loading && (
+      </Box>
+
+      {/* ——— loading overlay ——— */}
+      {loading && (
         <Box
           position="fixed"
           top={0}
@@ -222,29 +234,15 @@ useEffect(() => {
         >
           <CircularProgress />
         </Box>
-      )} */}
+      )}
 
-      {/* ========= DRAWER ========= */}
-      {/* <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
+ 
+      <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
         {drawerMenu}
-      </Drawer> */}
+      </Drawer>
 
-      {/* ========= PAGE SECTIONS ========= */}
-      <Banner />
-      <Text />
-      <VatConsultant />
-      <Ifrs />
-      <Budget />
-      <Management />
-      <StrategicPlanning />
-      <BusinessFeasbility />
-
-      <Box id="contact">
-        <FormOnly />
-      </Box>
-
-      {/* ========= FOOTER ========= */}
-      <Box sx={{background: `linear-gradient(to right, #005430, #00BA6A)`,}} py={4} px={4}>
+  
+      {/* <Box sx={{background: `linear-gradient(to right, #005430, #00BA6A)`,}} py={4} px={4}>
         <Grid container spacing={2}>
           <Grid  size={{xs:12,md:3}}>
             <Typography sx={{ fontSize: 18, color: 'white' }}>
@@ -315,7 +313,7 @@ useEffect(() => {
             </Box>
           </Grid>
         </Grid>
-      </Box>
+      </Box> */}
     </>
   );
 }
@@ -345,3 +343,4 @@ const footerLink = {
   color: 'white',
   my: 1,
 };
+ 

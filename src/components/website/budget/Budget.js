@@ -91,7 +91,7 @@ function Budget() {
   }, []);
 
   return (
-    <Box sx={{ px: { xs: 2, md: 10 }, py: 4 }} maxWidth={'1200px'} mx="auto">
+    <Box sx={{ px: { xs: 2, md: 10 }, py: 1 }} maxWidth={'1200px'} mx="auto">
       <Grid container spacing={4} alignItems="center">
         <Grid  size={{xs:12,md:5}}  data-aos="fade-right">
           <Box

@@ -49,7 +49,7 @@ Accounting Services
     <Typography fontSize={"30px"} fontWeight={400}>Accounting & Bookkeeping
 </Typography>
     <Typography fontSize={"22px"} fontWeight={300} my={2}>
-        Our extensive suite of financial solutions is designed to enhance cash flow and boost profitability. Our teams of certified accountants are dedicated to creating efficient systems for managing and monitoring your business’s financial health.
+        Our extensive suite of financial solutions is designed to enhance cash flow and boost profitability. Our team of certified accountants are dedicated to creating efficient systems for managing and monitoring your business’s financial health.
 
 </Typography>
 

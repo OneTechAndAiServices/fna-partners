@@ -19,7 +19,7 @@ export default function TermsData() {
     },
     {
       title: 'Company Information',
-      content: `FNA Partners is a professional accounting and financial advisory firm, legally operating under the laws of the United Arab Emirates and the Kingdom of Saudi Arabia.`,
+      content: `FNA Partners is a professional accounting and financial advisory firm, legally operating under the laws of the United Arab Emirates .`,
     },
     {
       title: 'Use of the Website',
@@ -55,7 +55,7 @@ export default function TermsData() {
       title: 'Governing Law',
       content: `These Terms are governed by and construed in accordance with the laws of:
 • The United Arab Emirates for UAE-based users.
-• The Kingdom of Saudi Arabia for KSA-based users.`,
+• GCC countries based users.`,
     },
     {
       title: 'Amendments',

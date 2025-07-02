@@ -398,37 +398,95 @@ import {
 import { ArrowForward, Circle } from "@mui/icons-material";
 import { green } from "@/components/utils/Utils";
 import Image from "next/image";
+import Link from "next/link";
 
+// const services = [
+//   {
+//     title: "ACCOUNTING SERVICES",
+//     description:
+//       "We are a well-established and registered accounting service provider serving businesses in UAE and Other GCC Countries.",
+//     points: [
+//       "Accounting & Bookkeeping",
+//       "VAT and Corporate Tax Consultancy",
+//       "IFRS Technical Accounting Advisory",
+//     ],
+//     icon: "/ac1.png"
+//   },
+//   {
+//     title: "FINANCIAL & BUSINESS STRATEGY",
+//     description:
+//       "At FnA, we specialize in providing strategic services that help you navigate challenges and seize opportunities.",
+//     points: ["Strategic Planning"],
+//     icon: "/ac2.png"
+
+//   },
+//   {
+//     title: "FINANCIAL, PLANING & ANALYSIS",
+//     description:
+//       "We provide comprehensive Financial Planning and Analysis & services to help drive your business’s strategic goals.",
+//     points: ["Budgeting And Forecasting", "Management Packs"],
+//     icon: "/ac3.png"
+
+//   },
+//     {
+//     title: "Business Feasibility Studies",
+//     description:
+//       "Know before you grow. We assess if your business idea or investment is commercially viable.",
+//     points: ["Market research and competitor analysis", "Start-up cost and break-even analysis","ROI projections and funding strategy"],
+//     icon: "/ac3.png"
+
+//   },
+// ];
 const services = [
   {
-    title: "ACCOUNTING SERVICES",
+    title: "Accounting Services in the UAE",
     description:
-      "We are a well-established and registered accounting service provider serving businesses in UAE and Other GCC Countries.",
+      "Expert accounting and tax solutions for businesses across Dubai, Abu Dhabi, and the GCC.We help you stay compliant and confident in your numbers.",
     points: [
-      "Accounting & Bookkeeping",
-      "VAT and Corporate Tax Consultancy",
-      "IFRS Technical Accounting Advisory",
+      "Bookkeeping and day-to-day accounting",
+      "VAT registration and filing, corporate tax advisory",
+      "IFRS financial reporting and technical accounting support",
     ],
-    icon: "/ac1.png"
+    icon: "/ac1.png",
+    route:"/accounting-services"
   },
   {
-    title: "FINANCIAL & BUSINESS STRATEGY",
+    title: "Financial Planning & Analysis (FP&A) Services",
     description:
-      "At FnA, we specialize in providing strategic services that help you navigate challenges and seize opportunities.",
-    points: ["Strategic Planning"],
-    icon: "/ac2.png"
+      "Drive smarter decisions with clear forecasts, reports, and analysis.Ideal for startups, SMEs, and high-growth businesses in the UAE.",
+    points: ["Budgeting and financial forecasting","Monthly management packs with business insights","Custom dashboards and KPIs"],
+    icon: "/ac2.png",
+     route:"/financial-planning"
 
   },
   {
-    title: "FINANCIAL, PLANING & ANALYSIS",
+    title: "Strategic Financial & Business Advisory",
     description:
-      "We provide comprehensive Financial Planning and Analysis & services to help drive your business’s strategic goals.",
-    points: ["Budgeting And Forecasting", "Management Packs"],
-    icon: "/ac3.png"
+      "Plan for long-term success with expert business and financial strategy.",
+    points: ["Business model design and scenario planning", "Strategic financial roadmaps" ,"Support for funding, scaling, or restructuring"],
+    icon: "/ac3.png",
+     route:"/strategic-financial"
+
+  },
+  {
+    title: " Fractional CEO and CFO Services",
+    description:
+      "Get senior executive support without hiring full-time.Perfect for fast-growing companies and founders in need of leadership.",
+    points: ["Interim CFO or CEO advisory in UAE/GCC", "Investor and board reporting","Cash flow and growth management"],
+    icon: "/ac3.png",
+     route:"/ceo-cfo-services"
+
+  },
+  {
+    title: "Business Feasibility Studies",
+    description:
+      "Know before you grow. We assess if your business idea or investment is commercially viable.",
+    points: ["Market research and competitor analysis", "Start-up cost and break-even analysis","ROI projections and funding strategy"],
+    icon: "/ac3.png",
+     route:"/business-feasibility"
 
   },
 ];
-
 const Services = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -482,21 +540,23 @@ const Services = () => {
             From bookkeeping and tax filing to payroll and financial planning, our expert services are designed to save your time, reduce errors.
           </Typography>
         </Box>
-        <Grid container spacing={4} alignItems={"center"}>
+        <Grid container spacing={4} alignItems={"center"} justifyContent={"center"}>
           {services.map((service, index) => (
-            <Grid
+             <Grid
               size={{ xs: 12, md: 4 }}
-              key={index}
               data-aos="fade-up"
               data-aos-delay={index * 150}
+              key={index}
             >
+         <Link href={service.route}>
+           
               <Paper
                 elevation={3}
                 sx={{
                   borderRadius: "32px",
                   p: 3,
                   border: `2px solid white`,
-                  minHeight: "400px",
+                  minHeight: "480px",
                   backgroundColor: "white",
                   transition: "0.3s",
                   "&:hover": {
@@ -556,14 +616,18 @@ const Services = () => {
                     ))}
                   </List>
                 )}
+                {/* <Button variant="outlined"  color="inherit" size="small" href={service.route}>
+                 details
+                </Button> */}
               </Paper>
+              </Link>
             </Grid>
           ))}
         </Grid>
         <Box display={"flex"} justifyContent={"center"} sx={{ mt: 4 }}>
           <Button sx={{ textTransform: "none", bgcolor: "white", color: "black", borderRadius: "47px", px: 2, fontSize: "15px", fontWeight: 400 }}
             endIcon={<ArrowForward sx={{ fontSize: "10px" }} />} href="/our-services">
-            Learn More
+            View all
           </Button>
         </Box>
       </Container>

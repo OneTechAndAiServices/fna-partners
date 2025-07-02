@@ -60,13 +60,13 @@ function Banner() {
               component="span"
             
               sx={{
-                backgroundImage: 'url(/fnaT.jpg)',
-                backgroundSize: 'cover',
+                // backgroundImage: 'url(/fnaT.jpg)',
+                // backgroundSize: 'cover',
                 // fontFamily:"fantasy",
                 mx:"auto",
-                backgroundPosition: 'center',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
+                // backgroundPosition: 'center',
+                // WebkitBackgroundClip: 'text',
+                // WebkitTextFillColor: 'transparent',
                 fontWeight: 740,
                 fontSize: 52,
                 filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.6))',
@@ -128,7 +128,7 @@ function Banner() {
             alignItems="center"
             data-aos="zoom-in-up"
           >
-            UAE and Other GCC Countries
+            UAE and GCC 
             {/* <Box
               component="span"
               sx={{

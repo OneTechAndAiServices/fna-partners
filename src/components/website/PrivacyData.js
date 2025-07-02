@@ -71,7 +71,7 @@ export default function PrivacyData() {
     {
       title: 'Contact Us',
       content: `For questions about this policy, or to exercise your rights, contact:
-Email: privacy@fnapartners.com`,
+Email: info@fna-partners.com`,
     },
   ];
 
