@@ -439,7 +439,7 @@ import Link from "next/link";
 // ];
 const services = [
   {
-    title: "Accounting Services in the UAE",
+    title: "Accounting Services ",
     description:
       "Expert accounting and tax solutions for businesses across Dubai, Abu Dhabi, and the GCC.We help you stay compliant and confident in your numbers.",
     points: [
@@ -460,7 +460,7 @@ const services = [
 
   },
   {
-    title: "Strategic Financial & Business Advisory",
+    title: "Strategic Services & Fractional CFO Support",
     description:
       "Plan for long-term success with expert business and financial strategy.",
     points: ["Business model design and scenario planning", "Strategic financial roadmaps" ,"Support for funding, scaling, or restructuring"],
@@ -468,24 +468,33 @@ const services = [
      route:"/strategic-financial"
 
   },
-  {
-    title: " Fractional CEO and CFO Services",
-    description:
-      "Get senior executive support without hiring full-time.Perfect for fast-growing companies and founders in need of leadership.",
-    points: ["Interim CFO or CEO advisory in UAE/GCC", "Investor and board reporting","Cash flow and growth management"],
-    icon: "/ac3.png",
-     route:"/ceo-cfo-services"
+  // {
+  //   title: "Strategic Financial & Business Advisory",
+  //   description:
+  //     "Plan for long-term success with expert business and financial strategy.",
+  //   points: ["Business model design and scenario planning", "Strategic financial roadmaps" ,"Support for funding, scaling, or restructuring"],
+  //   icon: "/ac3.png",
+  //    route:"/strategic-financial"
 
-  },
-  {
-    title: "Business Feasibility Studies",
-    description:
-      "Know before you grow. We assess if your business idea or investment is commercially viable.",
-    points: ["Market research and competitor analysis", "Start-up cost and break-even analysis","ROI projections and funding strategy"],
-    icon: "/ac3.png",
-     route:"/business-feasibility"
+  // },
+  // {
+  //   title: " Fractional CEO and CFO Services",
+  //   description:
+  //     "Get senior executive support without hiring full-time.Perfect for fast-growing companies and founders in need of leadership.",
+  //   points: ["Interim CFO or CEO advisory in UAE/GCC", "Investor and board reporting","Cash flow and growth management"],
+  //   icon: "/ac3.png",
+  //    route:"/ceo-cfo-services"
 
-  },
+  // },
+  // {
+  //   title: "Business Feasibility Studies",
+  //   description:
+  //     "Know before you grow. We assess if your business idea or investment is commercially viable.",
+  //   points: ["Market research and competitor analysis", "Start-up cost and break-even analysis","ROI projections and funding strategy"],
+  //   icon: "/ac3.png",
+  //    route:"/business-feasibility"
+
+  // },
 ];
 const Services = () => {
   const theme = useTheme();

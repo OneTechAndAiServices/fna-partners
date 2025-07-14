@@ -122,7 +122,10 @@ function Budget() {
             variant="h5"
             sx={{ color: green, fontWeight: 500, fontSize: '30px', mb: 1 }}
           >
-            Budget Development
+           Budget Development and Strategic Planning
+          </Typography>
+          <Typography>
+            A well-structured budget is essential for financial control and long-term success. Our FP&A experts help you develop detailed budgets that align with your strategic goals and operational plans.
           </Typography>
 
           <Box display={'flex'} my={2}>
@@ -134,14 +137,42 @@ function Budget() {
                 variant="h5"
                 sx={{ color: 'black', fontWeight: 500, fontSize: '22px', mb: 1 }}
               >
-                Budget Monitoring
+              	Comprehensive Budget Planning
               </Typography>
               <Typography sx={{ color: gray, fontSize: '17px', lineHeight: 1.8 }}>
-                Variance Analysis Monitor actual performance against the budget,
-                identifying variances and providing actionable insights to address
-                discrepancies. This approach enables you to understand the reasons
-                behind deviations and implement necessary corrective measures to stay
-                on track with your financial goals.
+               We create detailed annual budgets tailored to your business strategy, cost structure, and performance targets.
+              </Typography>
+            </Box>
+          </Box>
+             <Box display={'flex'} my={2}>
+            <Icon>
+              <ArrowForwardIosOutlinedIcon sx={{ fontSize: 18 }} />
+            </Icon>
+            <Box display={'flex'} flexDirection={'column'}>
+              <Typography
+                variant="h5"
+                sx={{ color: 'black', fontWeight: 500, fontSize: '22px', mb: 1 }}
+              >
+              	Accurate Cost Allocation
+              </Typography>
+              <Typography sx={{ color: gray, fontSize: '17px', lineHeight: 1.8 }}>
+             Allocate expenses efficiently across departments or projects for improved cost control and performance tracking.
+              </Typography>
+            </Box>
+          </Box>
+             <Box display={'flex'} my={2}>
+            <Icon>
+              <ArrowForwardIosOutlinedIcon sx={{ fontSize: 18 }} />
+            </Icon>
+            <Box display={'flex'} flexDirection={'column'}>
+              <Typography
+                variant="h5"
+                sx={{ color: 'black', fontWeight: 500, fontSize: '22px', mb: 1 }}
+              >
+              		Professional Budget Presentations
+              </Typography>
+              <Typography sx={{ color: gray, fontSize: '17px', lineHeight: 1.8 }}>
+              We prepare clear and engaging budget presentations to ensure stakeholder alignment and executive buy-in.
               </Typography>
             </Box>
           </Box>

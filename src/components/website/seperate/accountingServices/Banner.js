@@ -70,7 +70,7 @@ function Banner() {
       }}
     >
         <Typography fontSize={"50px"} fontWeight={500} mt={12} color='white'>
-        Accounting Services in the UAE
+        Accounting Services
         </Typography>
   
     </Box>

@@ -12,7 +12,7 @@ const lightGreen = "#00BA6A";
 function Banner() {
   const [displayText, setDisplayText] = useState('');
   const [index, setIndex] = useState(0);
-  const word = 'Accountancy';
+  const word = 'Accounting & Finance';
   const speed = 150;
   const bannerRef = useRef(null);
 
@@ -83,7 +83,7 @@ function Banner() {
               flexWrap: 'wrap',
               alignItems: 'center',
             //   justifyContent: 'center',
-              mb: 2,
+              // mb: 2,
               gap: '8px',
             }}
             data-aos="fade-up"
@@ -91,7 +91,13 @@ function Banner() {
           >
             <Box component="span" sx={{ color: '#000',fontWeight:600 }}>
               Leading Services in
+        
             </Box>
+          
+            {/* <Box component="span" sx={{ color: '#000' }}>
+              Services in
+            </Box> */}
+          </Typography>
             <Box
               component="span"
               sx={{
@@ -101,8 +107,8 @@ function Banner() {
   WebkitTextFillColor: 'transparent',
                 
                 minWidth: '12ch',
-                fontWeight:750,
-                fontSize:"50px",
+                fontWeight:600,
+                fontSize:"45px",
                 display: 'inline-block',
                 overflow: 'hidden',
                 whiteSpace: 'nowrap',
@@ -112,12 +118,8 @@ function Banner() {
             >
               {displayText}
             </Box>
-            {/* <Box component="span" sx={{ color: '#000' }}>
-              Services in
-            </Box> */}
-          </Typography>
 
-          <Typography
+          {/* <Typography
             fontSize="45px"
             fontWeight={530}
             display="flex"
@@ -129,7 +131,10 @@ function Banner() {
             data-aos="zoom-in-up"
           >
             UAE and GCC 
-            {/* <Box
+        
+          </Typography> */}
+
+    {/* <Box
               component="span"
               sx={{
                 backgroundImage: 'url(/dubai.jpg)',
@@ -160,12 +165,10 @@ function Banner() {
             >
               Saudi Arabia
             </Box> */}
-          </Typography>
-
        
           <Typography
             variant="body1"
-            sx={{ mb: 3 ,fontSize:"16px", fontWeight:"bold"}}
+            sx={{ my: 3 ,fontSize:"16px", fontWeight:"bold"}}
             data-aos="fade-up"
             data-aos-delay="400"
           >

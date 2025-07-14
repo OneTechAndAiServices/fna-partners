@@ -168,8 +168,8 @@ export default function AboutUs() {
       
         <Grid size={{xs:12,md:7}} data-aos="fade-left">
           <Typography
-            fontSize={{ xs: 18, md: 20 }}
-            fontWeight={500}
+            fontSize={{ xs: 20, md: 24 }}
+            fontWeight={600}
             color={darkGreen}
           >
             About Us
@@ -178,22 +178,24 @@ export default function AboutUs() {
           <Box borderTop={`1px solid ${darkGreen}`} mt={2} pt={2}>
             <Typography
               fontSize={{ xs: 24, md: 30 }}
-              fontWeight={400}
+              fontWeight={500}
               color={darkGreen}
               mb={1}
             >
-              Welcome to FnA Partners
+              Welcome to FnA Partners  Expert Accounting & Financial Advisory in the UAE
             </Typography>
 
             <Typography fontSize={{ xs: 16, md: 20 }} fontWeight={300} mt={1}>
-             With 30 years of experience in accounting, finance, and strategy, we are committed to delivering exceptional results. Our tailored financial solutions are designed to empower your business to thrive.
+           With over 30 years of experience in accounting, financial management, and strategic advisory, FnA Partners provides tailored solutions to help businesses across Dubai, Abu Dhabi, and the GCC thrive.
             </Typography>
                <Typography fontSize={{ xs: 16, md: 20 }} fontWeight={300} mt={2}>
-             Drawing on deep industry knowledge and a forward-thinking approach, we help you overcome challenges and seize new opportunities. Integrity and excellence guide everything we do.
+   Whether you're a startup or an established organization, we offer outsourced Bookkeeping, Corporate Tax and VAT compliance & filing, CFO services, and business feasibility studies designed to support growth and profitability.
             </Typography>
                <Typography fontSize={{ xs: 16, md: 20 }} fontWeight={300} mt={2} mb={2}>
-              Partner with us to unlock your business&apos;s full potential and
-              achieve lasting financial success.
+            Our team combines deep industry knowledge with a forward-thinking approach to help you overcome financial challenges and seize new opportunities. Integrity and excellence are at the core of everything we do.
+            </Typography>
+                <Typography fontSize={{ xs: 16, md: 20 }} fontWeight={600} mt={2} mb={2}>
+         Partner with FnA Partners to unlock your business’s full financial potential and achieve sustainable success
             </Typography>
 
             {/* ---------- GRADIENT SWAP BUTTON ---------- */}

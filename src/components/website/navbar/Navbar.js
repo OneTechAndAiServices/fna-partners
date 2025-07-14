@@ -218,10 +218,10 @@ export default function Navbar() {
                 <AboutUs />
             </Box>
             <Box id="services"><Services /></Box>
-            <SpecializedServices />
+            {/* <SpecializedServices /> */}
 
             {/* <VatConsultant /> */}
-            <BusinessFeasbility />
+            {/* <BusinessFeasbility /> */}
             <Box id="contact" >
                 <FormOnly />
             </Box>

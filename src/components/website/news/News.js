@@ -159,32 +159,32 @@ const StyledCard = styled(Card)(() => ({
 
 const newsBlogs = [
   {
-    title: 'Fna Accounting Client Success Story',
-    desc: 'When a fast-growing e-commerce brand struggled to manage its finances, Fna Accounting stepped in with a tailored strategy. From cleaning up messy books to implementing cash flow forecasting.',
+    title: 'How FNA Helped a Growing E-Commerce Brand Scale Fast',
+    desc: 'A rising e-commerce startup partnered with FNA Accounting for end-to-end financial clean-up, forecasting, and sustainable growth.',
     src: '/b1.png',
     fullContent: 'Here is the complete blog content with more details, client testimonials, and outcomes. FNA Partners also played a role in integrating financial tech tools.',
   },
   {
-    title: 'Why Your Startup Needs Professional Accounting Early',
-    desc: 'Fna Accounting stepped in with a tailored strategy. Early accounting helps startups avoid compliance issues and ensures smoother financial growth.',
+    title: 'Why Startups Should Prioritize Pro Accounting Early On',
+    desc: 'Startups often delay setting up finances. We helped one UAE-based startup build a solid foundation with early tax planning',
     src: '/b2.png',
     fullContent: 'Startups often ignore accounting at early stages. We explain how early accounting saves startups from compliance issues and poor cash flow.',
   },
   {
-    title: 'Understanding Cash Flow: A Beginner’s Guide',
-    desc: 'Learn the managing money with expert tips from Fna Accounting.',
+    title: 'Cash Flow Mastery for Beginners – A Practical Guide',
+    desc: 'Managing inflows and outflows is key. Our simple guide walks you through budgeting, forecasting, and understanding your financial runway to avoid surprises.',
     src: '/b3.png',
     fullContent: 'This guide walks beginners through cash inflows and outflows, budgeting, and forecasting using real examples.',
   },
   {
-    title: 'Top 5 Tax Mistakes Small Businesses Make',
-    desc: 'Avoid costly errors this tax season with expert guidance.',
+    title: 'Top 5 Tax Errors Small Businesses Must Avoid in 2025',
+    desc: 'Missed deductions or late filings? Learn about the most common tax mistakes and how your business can avoid penalties with proactive financial planning.',
     src: '/b4.png',
     fullContent: 'Small businesses often miss deductions, file late, or misreport. This blog gives actionable tips for avoiding penalties.',
   },
   {
-    title: 'GST & VAT Explained – What You Need to Know in 2025',
-    desc: 'Stay ahead with our simplified breakdown of GST and VAT.',
+    title: 'GST & VAT Demystified – What You Need to Know in 2025',
+    desc: 'From registration to compliance, we simplify the UAE’s GST & VAT landscape so you can stay ahead of changes and remain compliant ',
     src: '/b5.png',
     fullContent: 'GST and VAT laws are evolving. This post breaks it down for entrepreneurs so they stay compliant in 2025.',
   },
