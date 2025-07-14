@@ -384,9 +384,9 @@ function StrategicPlanning() {
 
         <Grid size={{xs:12}} data-aos="fade-left">
           <Typography sx={{ color: gray, fontSize: '16px', lineHeight: 1.8, mb: 4 }}>
-            In today’s fast-paced and competitive business environment, having a clear, data-driven strategy is essential for long-term success. At <strong>FnA Partners</strong>, we offer strategic advisory services designed to help you define direction, manage risk, and unlock new opportunities — with the added flexibility of fractional CFO leadership.
+            In today s fast-paced and competitive business environment, having a clear, data-driven strategy is essential for long-term success. At <strong>FnA Partners</strong>, we offer strategic advisory services designed to help you define direction, manage risk, and unlock new opportunities — with the added flexibility of fractional CFO leadership.
             <br /><br />
-            Whether you're looking to refine your strategic roadmap, boost financial performance, or assess new ventures, our team provides expert guidance at every stage.
+            Whether you are looking to refine your strategic roadmap, boost financial performance, or assess new ventures, our team provides expert guidance at every stage.
           </Typography>
 
           <Typography
@@ -458,7 +458,7 @@ function StrategicPlanning() {
             <Typography fontSize={16} sx={{ mb: 2, color: gray }}>
               🚀 Let’s Build a Smarter Future for Your Business
               <br />
-              Whether you're exploring new markets, raising capital, or transforming operations,
+              Whether you are exploring new markets, raising capital, or transforming operations,
               our strategic services and fractional CFO support give you the confidence and clarity to lead decisively.
             </Typography>
             <Button

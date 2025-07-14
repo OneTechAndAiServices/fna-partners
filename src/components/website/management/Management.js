@@ -220,10 +220,8 @@ function Management() {
       </Box>
 
       <Grid container spacing={4}>
-        {/* Left Side */}
         <Grid size={{xs:12,md:7}} data-aos="fade-right">
           <Grid container spacing={4}>
-            {/* Reporting */}
             <Grid size={{xs:12,md:6}} className="gsap-mgmt">
               <Typography
                 variant="h6"
@@ -254,7 +252,6 @@ function Management() {
               </List>
             </Grid>
 
-            {/* Modelling */}
             <Grid size={{xs:12,md:6}} className="gsap-mgmt">
               <Typography
                 variant="h6"
@@ -331,7 +328,7 @@ function Management() {
               color="#555"
               sx={{ mb: 2, lineHeight: 1.8 }}
             >
-              Whether you're a startup refining your budget or an established business planning for growth, our FP&A services are here to help you turn financial data into strategic insight.
+              Whether you are a startup refining your budget or an established business planning for growth, our FP&A services are here to help you turn financial data into strategic insight.
             </Typography>
 
             <Button

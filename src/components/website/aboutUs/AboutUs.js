@@ -172,7 +172,7 @@ export default function AboutUs() {
             fontWeight={600}
             color={darkGreen}
           >
-            About Us
+            About Us
           </Typography>
 
           <Box borderTop={`1px solid ${darkGreen}`} mt={2} pt={2}>
@@ -182,14 +182,14 @@ export default function AboutUs() {
               color={darkGreen}
               mb={1}
             >
-              Welcome to FnA Partners  Expert Accounting & Financial Advisory in the UAE
+              Welcome to FnA Partners  Expert Accounting & Financial Advisory in the UAE
             </Typography>
 
             <Typography fontSize={{ xs: 16, md: 20 }} fontWeight={300} mt={1}>
            With over 30 years of experience in accounting, financial management, and strategic advisory, FnA Partners provides tailored solutions to help businesses across Dubai, Abu Dhabi, and the GCC thrive.
             </Typography>
                <Typography fontSize={{ xs: 16, md: 20 }} fontWeight={300} mt={2}>
-   Whether you're a startup or an established organization, we offer outsourced Bookkeeping, Corporate Tax and VAT compliance & filing, CFO services, and business feasibility studies designed to support growth and profitability.
+   Whether you are a startup or an established organization, we offer outsourced Bookkeeping, Corporate Tax and VAT compliance & filing, CFO services, and business feasibility studies designed to support growth and profitability.
             </Typography>
                <Typography fontSize={{ xs: 16, md: 20 }} fontWeight={300} mt={2} mb={2}>
             Our team combines deep industry knowledge with a forward-thinking approach to help you overcome financial challenges and seize new opportunities. Integrity and excellence are at the core of everything we do.
