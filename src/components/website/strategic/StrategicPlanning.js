@@ -358,29 +358,7 @@ function StrategicPlanning() {
       </Box>
 
       <Grid container spacing={6} alignItems="center">
-        {/* <Grid item xs={12} md={5} size={{xs:12,md:5}} data-aos="fade-right">
-          <Box
-            sx={{
-              borderRadius: 4,
-              overflow: 'hidden',
-              width: '100%',
-              maxWidth: 400,
-              mx: 'auto',
-            }}
-          >
-            <Image
-              src="/strategic.png"
-              alt="Strategic Planning"
-              width={500}
-              height={500}
-              style={{
-                width: '100%',
-                height: 'auto',
-                borderRadius: '20px',
-              }}
-            />
-          </Box>
-        </Grid> */}
+
 
         <Grid size={{xs:12}} data-aos="fade-left">
           <Typography sx={{ color: gray, fontSize: '16px', lineHeight: 1.8, mb: 4 }}>
