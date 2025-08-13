@@ -71,6 +71,7 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
+  Grid,
 } from '@mui/material'
 
 import GridViewIcon from '@mui/icons-material/GridView'
@@ -81,6 +82,7 @@ import SyncAltIcon from '@mui/icons-material/SyncAlt'
 import InventoryIcon from '@mui/icons-material/Inventory'
 import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn'
 import AssessmentIcon from '@mui/icons-material/Assessment'
+import Image from 'next/image'
 
 function Text() {
   const darkGreen = "#005430"
@@ -94,7 +96,7 @@ function Text() {
         flexDirection={"column"}
         textAlign={"center"}
         my={4}
-        maxWidth={"1000px"}
+        maxWidth={"1300px"}
         mx={"auto"}
       >
         <Button
@@ -140,13 +142,16 @@ function Text() {
         <Typography fontSize={"30px"} fontWeight={400}>
           Accounting & Bookkeeping Services in Dubai, the rest of the UAE & the GCC
         </Typography>
-
-        <Typography fontSize={"22px"} fontWeight={300} my={2}>
+        <Typography fontSize={"22px"} fontWeight={300} >
+At FnA Partners, we offer professional accounting and bookkeeping services tailored for businesses across Dubai, Abu Dhabi, and the wider GCC. Whether you're a startup, SME, or a established organization, we help you maintain financial accuracy, enhance cash flow, and ensure full regulatory compliance        </Typography>
+        <Typography fontSize={"22px"} fontWeight={300} my={2} mb={4}>
           Our extensive suite of financial solutions is designed to enhance cash flow and boost profitability. Our team of certified accountants are dedicated to creating efficient systems for managing and monitoring your business’s financial health.
         </Typography>
 
-        <Box mt={4} textAlign={"left"}>
-          <Typography fontSize={"24px"} fontWeight={500} mb={2}>
+   <Grid container spacing={2}>
+    <Grid size={{xs:11,md:6}} >
+           <Box mt={4} textAlign={"left"}>
+          <Typography fontSize={"24px"} fontWeight={500} mb={2} ml={2}>
             Our Core Accounting Services Include:
           </Typography>
 
@@ -192,10 +197,26 @@ function Text() {
             </ListItem>
           </List>
 
-          <Typography fontSize={"18px"} fontWeight={300} mt={3}>
+          <Typography fontSize={"18px"} fontWeight={300} mt={3} ml={2} >
             We leverage leading cloud-based systems and automation tools to ensure efficiency, accuracy, and visibility across your finance function.
           </Typography>
         </Box>
+    </Grid>
+    <Grid size={{xs:12,md:6}}>
+      <Image
+src={"/serve.jpg"}
+       height={900}
+       width={900}
+       alt='noimage'
+       style={{
+        height:"auto",
+        width:"80%",
+        borderRadius:"12px"
+       }}
+       
+       />
+    </Grid>
+   </Grid>
       </Box>
     </>
   )

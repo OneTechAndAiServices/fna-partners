@@ -184,9 +184,8 @@ function VatConsultant() {
   }, []);
 
   return (
-    <Box ref={containerRef} sx={{ px: { xs: 2, md: 10 }, py: 4 }}>
+    <Box ref={containerRef} sx={{ px: { xs: 2, md: 4 }, py: 4 }}>
       <Grid container spacing={4} alignItems="center" sx={{ px: 4, borderRadius: '10px', py: 2 }}>
-        {/* Text Section */}
         <Grid size={{xs:12,md:7}} data-aos="fade-right">
           <Typography
             variant="h5"

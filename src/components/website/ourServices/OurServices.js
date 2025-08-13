@@ -244,7 +244,7 @@ useEffect(() => {
       </Box>
 
       {/* ========= FOOTER ========= */}
-      <Box sx={{background: `linear-gradient(to right, #005430, #00BA6A)`,}} py={4} px={4}>
+      {/* <Box sx={{background: `linear-gradient(to right, #005430, #00BA6A)`,}} py={4} px={4}>
         <Grid container spacing={2}>
           <Grid  size={{xs:12,md:3}}>
             <Typography sx={{ fontSize: 18, color: 'white' }}>
@@ -315,7 +315,7 @@ useEffect(() => {
             </Box>
           </Grid>
         </Grid>
-      </Box>
+      </Box> */}
     </>
   );
 }

@@ -384,7 +384,7 @@ function StrategicPlanning() {
 
         <Grid size={{xs:12}} data-aos="fade-left">
           <Typography sx={{ color: gray, fontSize: '16px', lineHeight: 1.8, mb: 4 }}>
-            In today s fast-paced and competitive business environment, having a clear, data-driven strategy is essential for long-term success. At <strong>FnA Partners</strong>, we offer strategic advisory services designed to help you define direction, manage risk, and unlock new opportunities — with the added flexibility of fractional CFO leadership.
+            In todays fast-paced and competitive business environment, having a clear, data-driven strategy is essential for long-term success. At <strong>FnA Partners</strong>, we offer strategic advisory services designed to help you define direction, manage risk, and unlock new opportunities — with the added flexibility of fractional CFO leadership.
             <br /><br />
             Whether you are looking to refine your strategic roadmap, boost financial performance, or assess new ventures, our team provides expert guidance at every stage.
           </Typography>
@@ -393,13 +393,13 @@ function StrategicPlanning() {
             variant="h5"
             sx={{ color: green, fontWeight: 600, fontSize: '26px', mb: 1 }}
           >
-            💼 Fractional CFO Services in the UAE
+            Fractional CFO Services in the UAE
           </Typography>
           <Typography sx={{ color: gray, fontSize: '16px', lineHeight: 1.8, mb: 4 }}>
             Access expert financial leadership — without the cost of a full-time hire. Our fractional CFO services provide experienced financial oversight tailored to your business’s size, sector, and stage of growth.
             <br /><br />
             <strong>Our fractional CFO solutions include:</strong><br />
-            •  Cah flow forecasting and working capital optimisation<br />
+            •  Cash flow forecasting and working capital optimisation<br />
             •  Strategic financial planning aligned with business goals<br />
             •  Cost control and efficiency improvements<br />
             •  Fundraising support and investor readiness<br />
@@ -411,7 +411,7 @@ function StrategicPlanning() {
             variant="h5"
             sx={{ color: green, fontWeight: 600, fontSize: '26px', mb: 1 }}
           >
-            🧠 Strategic Planning Services
+            Strategic Planning Services
           </Typography>
           <Typography sx={{ color: gray, fontSize: '16px', lineHeight: 1.8, mb: 4 }}>
             Effective strategy is more than just vision — it’s about execution. We work with founders and leadership teams to build custom 3–5 year strategic plans that turn ambition into results.
@@ -427,7 +427,7 @@ function StrategicPlanning() {
             variant="h5"
             sx={{ color: green, fontWeight: 600, fontSize: '26px', mb: 1 }}
           >
-            📊 Business Feasibility Studies
+            Business Feasibility Studies
           </Typography>
           <Typography sx={{ color: gray, fontSize: '16px', lineHeight: 1.8, mb: 4 }}>
             Before committing resources to a new project or venture, ensure you have the right insights to proceed with confidence. Our feasibility study services provide a full picture of commercial, operational, and financial viability.
@@ -444,7 +444,7 @@ function StrategicPlanning() {
               variant="h6"
               sx={{ color: green, fontWeight: 600, mb: 1 }}
             >
-              ✅ Why FnA Partners?
+              Why FnA Partners?
             </Typography>
             <Typography sx={{ color: gray, fontSize: '16px', lineHeight: 1.8 }}>
               • Over 30 years of strategic, financial, and commercial expertise<br />

@@ -74,7 +74,7 @@ function StrategicFinancial() {
       }}
     >
         <Typography fontSize={"50px"} fontWeight={500} mt={12} color='white'>
-            Strategic Financial & Business Advisory
+        Strategic Services & Fractional CFO Support
         </Typography>
 
   

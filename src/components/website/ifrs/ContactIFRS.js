@@ -19,7 +19,7 @@ function ContactIFRS() {
   return (
     <Box
       sx={{
-        px: { xs: 3, md: 6 },
+        px: { xs: 3, md: 3 },
         py: 10,
         background: 'linear-gradient(to right, #f8f9fa, #ffffff)',
         borderRadius: '12px',
@@ -44,7 +44,7 @@ function ContactIFRS() {
       </Typography>
 
       <Grid container spacing={3} justifyContent="center" mb={6}>
-        <Grid size={{xs:12,md:6}}>
+        <Grid size={{xs:12,md:9}}>
           <Typography fontSize={16} color="#444" mb={2} display="flex" alignItems="center" justifyContent="center" gap={1}>
             <CalendarMonthIcon color="success" />
             30+ years of regional and international experience
@@ -85,7 +85,7 @@ function ContactIFRS() {
         sx={{
           fontSize: 16,
           color: '#555',
-          maxWidth: 700,
+          maxWidth: 900,
           mx: 'auto',
           lineHeight: 1.8,
           mb: 4,
